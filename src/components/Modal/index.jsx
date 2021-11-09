@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import ReactModal from 'react-modal';
+import { Component } from "react";
+import ReactModal from "react-modal";
 
 class Modal extends Component {
   constructor(props) {
@@ -7,16 +7,16 @@ class Modal extends Component {
 
     const { isOpen } = this.props;
     this.state = {
-      modalStatus: isOpen
-    }
+      modalStatus: isOpen,
+    };
   }
 
   componentDidUpdate(prevProps) {
     const { isOpen } = this.props;
 
     if (prevProps.isOpen !== isOpen) {
-      console.log(this.props)
-      this.setState({ modalStatus: isOpen })
+      console.log(this.props);
+      this.setState({ modalStatus: isOpen });
     }
   }
 
@@ -32,20 +32,20 @@ class Modal extends Component {
         ariaHideApp={false}
         style={{
           content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            background: '#F0F0F5',
-            color: '#000000',
-            borderRadius: '8px',
-            width: '736px',
-            border: 'none',
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+            background: "#F0F0F5",
+            color: "#000000",
+            borderRadius: "8px",
+            width: "736px",
+            border: "none",
           },
           overlay: {
-            backgroundColor: '#121214e6',
+            backgroundColor: "#121214e6",
           },
         }}
       >
@@ -53,6 +53,6 @@ class Modal extends Component {
       </ReactModal>
     );
   }
-};
+}
 
 export default Modal;
