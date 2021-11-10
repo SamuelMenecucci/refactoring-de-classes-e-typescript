@@ -7,6 +7,15 @@ import ModalAddFood from "../../components/ModalAddFood";
 import ModalEditFood from "../../components/ModalEditFood";
 import { FoodsContainer } from "./styles";
 
+// export function Dashboard() {
+
+//   function toggleModal
+
+//   return (
+
+//   )
+// }
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
