@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import ReactModal from "react-modal"; // yarn add @types/react-modal -D
 
 interface ModalProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  children: string;
+  children: ReactNode;
 }
 
 export function Modal({ isOpen, setIsOpen, children }: ModalProps) {
@@ -32,12 +33,13 @@ export function Modal({ isOpen, setIsOpen, children }: ModalProps) {
         },
       }}
     >
-      {/*   */}
+      {/* propriedade children é uma propriedade que todo componente no react tem. serve para acessarmos o conteudo que está sendo passado para um componente dentro da nossa aplicação */}
       {children}
     </ReactModal>
   );
 }
 
+//CLASS COMPONENT
 // class Modal extends Component {
 //   constructor(props) {
 //     super(props);
