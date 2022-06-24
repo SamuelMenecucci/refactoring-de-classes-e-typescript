@@ -3,9 +3,22 @@ import { FiCheckSquare } from "react-icons/fi";
 import { Form } from "./styles";
 import { Modal } from "../Modal";
 import Input from "../Input";
+import { FoodType } from "../../pages/Dashboard";
 
-function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUpdateFood }) {
-  async function handleSubmit(data) {
+type ModalEditFoodProps = {
+  isOpen: boolean;
+  setIsOpen: () => void;
+  editingFood: FoodType;
+  handleUpdateFood: (data: FoodType) => Promise<void>;
+};
+
+function ModalEditFood({
+  isOpen,
+  setIsOpen,
+  editingFood,
+  handleUpdateFood,
+}: ModalEditFoodProps) {
+  async function handleSubmit(data: FoodType) {
     handleUpdateFood(data);
     setIsOpen();
   }
