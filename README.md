@@ -1,4 +1,4 @@
-# refactoring-class-and-typescript
+# Refactoring Class And Typescript
 
 Challenge to refactor an already working application and perform the migration process from class components and Javascript to function components and Typescript.
 
